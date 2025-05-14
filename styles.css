@@ -6,13 +6,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
-/* NAVIGATION */
 nav {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 1rem;
 }
 
@@ -33,28 +31,28 @@ nav a:hover {
   background-color: #555;
 }
 
-/* MAIN LAYOUT */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+.flex-container {
+  display: flex;
   gap: 20px;
   padding: 20px;
 }
 
 .sidebar {
-  background: #f4f4f4;
+  flex: 1;
+  background-color: #f4f4f4;
   padding: 1rem;
 }
 
 .main-content {
-  background: #e4e4e4;
+  flex: 3;
+  background-color: #e4e4e4;
   padding: 1rem;
 }
 
-/* RESPONSIVENESS */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
+  .flex-container {
+    flex-direction: column;
   }
 
   nav ul {
@@ -65,11 +63,6 @@ nav a:hover {
 
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
     font-size: 14px;
-  }
-
-  .container {
-    padding: 10px;
   }
 }
